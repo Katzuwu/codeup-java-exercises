@@ -12,8 +12,15 @@ public class ConsoleExercises {
 //        String firstWord = scanner.next() + scanner.nextLine();
 //        System.out.println("What is your second word?");
 //        String secondWord = scanner.nextLine();
-//        System.out.println("what is your third word?");
+//        System.out.println("What is your third word?");
 //        String thirdWord = scanner.nextLine();
 //        System.out.println("Master, the 3 words you entered are: " + firstWord + ", " + secondWord + ", " + thirdWord + ". You will now shut down.");
+        System.out.println("Master, will you enter the length of your Codeup classroom?");
+        String dn = scanner.nextLine();
+        int length = Integer.parseInt(dn);
+        System.out.println("Now will you enter the width of the Codeup classroom?");
+        String candice = scanner.nextLine();
+        int width = Integer.parseInt(candice);
+        System.out.println("The perimeter of your classroom is " + ((length*2) + (width * 2)) + ". The area of your classroom is " + (length * width) + ".");
     }
 }
