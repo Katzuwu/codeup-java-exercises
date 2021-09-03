@@ -5,16 +5,25 @@ public class ConsoleExercises {
         Scanner scanner = new Scanner(System.in);
 //        double pi = 3.14159;
 //        System.out.format("The value of pi is approximately %.2f%n", pi);
+
+
 //        System.out.println("Ohayō Master, would you please enter an integer for me?");
 //        int userInteger = scanner.nextInt();
 //        System.out.println("The integer you enter Master was " + userInteger);
-//        System.out.println("Enter 3 words for me Master. What is your first word?");
-//        String firstWord = scanner.next() + scanner.nextLine();
-//        System.out.println("What is your second word?");
-//        String secondWord = scanner.nextLine();
-//        System.out.println("What is your third word?");
-//        String thirdWord = scanner.nextLine();
-//        System.out.println("Master, the 3 words you entered are: " + firstWord + ", " + secondWord + ", " + thirdWord + ". You will now shut down.");
+
+
+//        System.out.println("Enter 3 words for me Master.");
+//        String firstWord = scanner.next();
+//        String secondWord = scanner.next();
+//        String thirdWord = scanner.next();
+//        System.out.printf("Master, the 3 words you entered are: %n%s%n%s%n%s", firstWord, secondWord, thirdWord);
+
+
+//        System.out.println("Will you enter a sentence for me, Master?");
+//        String sentence = scanner.nextLine();
+//        System.out.println(sentence);
+
+
         System.out.println("Master, will you enter the length of your Codeup classroom?");
         String dn = scanner.nextLine();
         int length = Integer.parseInt(dn);
