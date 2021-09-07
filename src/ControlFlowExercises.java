@@ -41,14 +41,17 @@ public class ControlFlowExercises {
 //        }
 
         //problem 3
-//        System.out.println("Enter a number for me to display on a table!");
-//        int userInt = scanner.nextInt();
-//        System.out.println("Here is your table!\n");
-//        System.out.println("Number  |  Squared  |  Cubed");
-//        System.out.println("--------|-----------|--------");
-//        for (int i = 1; i <= userInt; i++){
+        System.out.println("Enter a number for me to display on a table!");
+        int userInt = scanner.nextInt();
+        System.out.println("Here is your table!\n");
+        System.out.println("Number  |  Squared  |  Cubed");
+        System.out.println("--------|-----------|--------");
+        for (int i = 1; i <= userInt; i++){
+            //my solution
 //            System.out.println(i + "       |     " + (i * i) + "     |   " + (i * i * i));
-//        }
+            //teachers solution for formatting
+            System.out.printf("%-8d| %-10d| %-7d%n", i, i*i, i*i*i);
+        }
 
         //problem 4
         System.out.println("Enter your grade in a number and I'll tell you A-F what you got!");
