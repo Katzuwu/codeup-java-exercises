@@ -7,12 +7,12 @@ public class MethodsExercises {
     public static void main(String[] args) {
 //        System.out.println(addition(1,2));
 //        System.out.println(subtraction(5,1));
-//        System.out.println(multiplication(3,5));
+        System.out.println(multiplication(3,5));
 //        System.out.println(division(15,3));
 //        System.out.println(modulus(5,2));
 //        System.out.println(getInteger(10, 30));
 //        factorial();
-        diceRoll();
+//        diceRoll();
     }
     public static int addition(int num1, int num2){
         return num1 + num2;
@@ -23,10 +23,11 @@ public class MethodsExercises {
     }
     
     public static int multiplication(int num1, int num2){
-        return num1 * num2;
-//        for (int i = num2; i > 0; i--){
-//            return num1 =+ i;
-//        }
+//        return num1 * num2;
+        int total = 0;
+        for (int i = num2; i > 0; i--){
+           total += num1;
+        } return total;
     }
 
     public static int division(int num1, int num2){
