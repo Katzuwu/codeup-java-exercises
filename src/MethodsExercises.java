@@ -1,5 +1,5 @@
-import java.util.Objects;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class MethodsExercises {
 
@@ -12,7 +12,7 @@ public class MethodsExercises {
 //        System.out.println(modulus(5,2));
 //        System.out.println(getInteger(10, 30));
 //        factorial();
-
+        diceRoll();
     }
     public static int addition(int num1, int num2){
         return num1 + num2;
@@ -59,7 +59,8 @@ public class MethodsExercises {
         } else {
             for(int i = 2; i <= input; i++){
                 total *= i;
-            } System.out.println(total);
+                System.out.println(total);
+            }
 
         }
         System.out.println("Would you like to continue? [Y/N]");
@@ -70,6 +71,33 @@ public class MethodsExercises {
         }
         else if (response.equals("n")){
             System.out.println("Thank you for playing!");
+        }
+        return input;
+    }
+
+    public static int diceRoll(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hey! Enter a number and we will use that as the number of sides on 2 dice.");
+        int input = sc.nextInt();
+        int dice1 = (int)(Math.random() * input) + 1;
+        int dice2 = (int)(Math.random() * input) + 1;
+        System.out.println("Okay! Would you like to roll the dice? [Y/N]");
+        String roll = sc.nextLine() + sc.next();
+        if (roll.equals("y")) {
+            System.out.println("Your two numbers are " + dice1 + " and " + dice2 + "! Would you like to roll again? [Y/N]");
+            String response = sc.nextLine() + sc.next();
+            if (response.equals("y"))
+                return diceRoll();
+            else if (response.equals("n"))
+                System.out.println("Thanks for playing!");
+        } else {
+            System.out.println("Awww. Okay then, I'll do it.");
+            System.out.println("Your two numbers are " + dice1 + " and " + dice2 + "! Would you like to roll again? [Y/N]");
+            String response = sc.nextLine() + sc.next();
+            if (response.equals("y"))
+                return diceRoll();
+            else if (response.equals("n"))
+                System.out.println("Thanks for playing!");
         }
         return input;
     }
