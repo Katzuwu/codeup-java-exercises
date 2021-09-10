@@ -9,6 +9,10 @@ public class Input {
         return scanner.nextLine();
     }
 
+    public Boolean yesNo(String input){
+        return input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yeah");
+    }
+
     public Boolean yesNo(){
         System.out.println("If you enter yes, y or yeah, this will return true");
         String userInput = scanner.nextLine();
