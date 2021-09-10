@@ -1,7 +1,10 @@
 public class Test {
 
     public static void main(String[] args) {
-        System.out.println("Hello, Dr Aco!");
+        Fox Senko = new Fox();
+        Senko.name = "Senko";
+        Senko.sound = Quote.randomQuote();
+        Senko.makeNoise();
     }
 
 }
