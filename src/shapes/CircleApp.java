@@ -9,7 +9,7 @@ public class CircleApp {
         double userRadius = input.getDouble();
         System.out.println("Okay, we're going to make a circle out of that number");
         Circle userCircle = new Circle(userRadius);
-        System.out.println("Okay! Here is your circumference: " + userCircle.getCircumference());
-        System.out.println("And here is your area: " + userCircle.getArea());
+        System.out.printf("Okay! Here is the circumference of your circle: %.2f\n", userCircle.getCircumference());
+        System.out.printf("And here is your area: %.2f", userCircle.getArea());
     }
 }
