@@ -14,7 +14,7 @@ public class Input {
     }
 
     public Boolean yesNo(){
-        System.out.println("If you enter yes, y or yeah, this will return true");
+        System.out.println("Please enter yes or no.");
         String userInput = scanner.nextLine();
         return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yeah");
     }
