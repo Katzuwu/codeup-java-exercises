@@ -7,4 +7,8 @@ public class Motorcycle extends Vehicle{
         super.makeNoise();
         System.out.println("Aw man, I'm out of gas!");
     }
+
+    public void soundAlarm(){
+        System.out.println("YOU WILL NEVER TAKE ME ALIVE");
+    }
 }

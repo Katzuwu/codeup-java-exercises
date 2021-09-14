@@ -12,4 +12,8 @@ public class Vehicle {
     public void makeNoise(){
         System.out.println("Vroom vroom");
     }
+
+    public void soundAlarm(){
+        System.out.println("HELP SOMEONE IS TRYING TO STEAL ME");
+    }
 }

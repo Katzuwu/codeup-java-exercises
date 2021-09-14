@@ -18,5 +18,8 @@ public class BirdTest {
         goldfinch.setName("Goldy");
         System.out.println(goldfinch.getName() + " says:");
         goldfinch.makeNoise();
+
+        Bird myBird = new Duck();
+        myBird.makeNoise();
     }
 }
