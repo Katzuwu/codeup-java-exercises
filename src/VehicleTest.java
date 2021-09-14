@@ -8,8 +8,6 @@ public class VehicleTest {
         Motorcycle yamaha = new Motorcycle();
         yamaha.setName("Yamaha R1");
         System.out.println("This is my " + yamaha.getName());
-        yamaha.makeNoise();
+        yamaha.breakingDownNoise();
     }
-
-
 }
