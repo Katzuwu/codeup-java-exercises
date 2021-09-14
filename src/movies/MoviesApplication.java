@@ -55,8 +55,8 @@ public class MoviesApplication {
                         }
                         break;
                 }
-            } else
-                System.out.println("Okay. Thanks for stopping by!");
-        }
+            }
+        } else
+            System.out.println("Okay. Thanks for stopping by!");
     }
 }
