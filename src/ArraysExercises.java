@@ -29,11 +29,4 @@ public class ArraysExercises {
         System.out.println();
         return newArray;
     }
-
-//    double[] add(double[] array, double val){
-//        double[] copy = new double[array.length + 1];
-//        System.arraycopy(array, 0, copy, 0, array.length);
-//        copy[array.length] = val;
-//        return copy;
-//    }
 }
