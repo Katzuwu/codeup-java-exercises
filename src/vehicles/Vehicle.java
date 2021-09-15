@@ -1,11 +1,21 @@
+package vehicles;
+
 public class Vehicle {
-    private String name;
+    protected String name;
 
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
+        this.name = name;
+    }
+
+    public Vehicle(){
+
+    }
+
+    public Vehicle(String name){
         this.name = name;
     }
 

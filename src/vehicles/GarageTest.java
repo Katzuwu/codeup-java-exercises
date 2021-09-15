@@ -1,9 +1,14 @@
+package vehicles;
+
+import vehicles.Car;
+import vehicles.Garage;
+
 public class GarageTest {
     public static void main(String[] args) {
-        Vehicle car = new Car();
-        car.setName("Honda Civic");
-        Vehicle motorcycle = new Motorcycle();
-        motorcycle.setName("Yamaha R1");
+        Vehicle car = new Car("Honda Civic");
+//        car.setName("Honda Civic");
+        Vehicle motorcycle = new Motorcycle("Yamaha R1");
+//        motorcycle.setName("Yamaha R1");
         Vehicle truck = new Vehicle();
         truck.setName("Toyota Tundra");
         Garage.vehicles[0] = car;

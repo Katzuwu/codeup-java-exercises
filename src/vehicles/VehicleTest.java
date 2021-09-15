@@ -1,3 +1,8 @@
+package vehicles;
+
+import vehicles.Motorcycle;
+import vehicles.Vehicle;
+
 public class VehicleTest {
     public static void main(String[] args) {
         Vehicle honda = new Vehicle();

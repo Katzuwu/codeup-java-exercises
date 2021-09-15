@@ -1,3 +1,5 @@
+package vehicles;
+
 public class Garage {
     public static Vehicle[] vehicles = new Vehicle[3];
 
@@ -16,12 +18,12 @@ public class Garage {
     }
 
     //Teacher solution
-//    public static Vehicle findVehicle(Vehicle[] vehicles, String car){
-//        for (Vehicle vehicle : vehicles){
+//    public static vehicles.Vehicle findVehicle(vehicles.Vehicle[] vehicles, String car){
+//        for (vehicles.Vehicle vehicle : vehicles){
 //            if(vehicle.getName().equals(car))
 //                return vehicle;
 //        }
-//        Vehicle notHere = new Vehicle();
+//        vehicles.Vehicle notHere = new vehicles.Vehicle();
 //        notHere.setName(null);
 //        return notHere;
 //    }
