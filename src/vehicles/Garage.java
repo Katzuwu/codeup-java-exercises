@@ -1,7 +1,7 @@
 package vehicles;
 
 public class Garage {
-    public static Vehicle[] vehicles = new Vehicle[3];
+    public static Vehicle[] vehicles = new Vehicle[4];
 
     public static void alarmCascade(Vehicle[] cars){
         for (Vehicle vehicle : cars){
