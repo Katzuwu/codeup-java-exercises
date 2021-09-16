@@ -13,10 +13,10 @@ public class Rectangle {
     }
 
     public int getPerimeter(){
-        return (this.length * 2) + (this.width * 2);
+        return (length * 2) + (width * 2);
     }
 
     public int getArea(){
-        return this.length * this.width;
+        return length * width;
     }
 }

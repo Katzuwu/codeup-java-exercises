@@ -6,8 +6,10 @@ public class ShapesTest {
         System.out.println(box1.getPerimeter());
         System.out.println(box1.getArea());
 
-        Rectangle box2 = new Square(5);
-        System.out.println(box2.getPerimeter());
-        System.out.println(box2.getArea());
+        Square box2 = new Square(5);
+        System.out.println(box2.getArea(5));
+        System.out.println(box2.getPerimeter(5));
+
+        //one getArea uses parameters to define the side of the square to differentiate it from the other one.
     }
 }
