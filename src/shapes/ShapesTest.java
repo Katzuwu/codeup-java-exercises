@@ -7,8 +7,8 @@ public class ShapesTest {
         System.out.println(box1.getArea());
 
         Square box2 = new Square(5);
-        System.out.println(box2.getArea(5));
-        System.out.println(box2.getPerimeter(5));
+        System.out.println(box2.getArea());
+        System.out.println(box2.getPerimeter());
 
         //one getArea uses parameters to define the side of the square to differentiate it from the other one.
     }
