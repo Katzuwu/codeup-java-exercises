@@ -20,11 +20,11 @@ public class Square extends Quadrilateral implements Measurable{
 
     @Override
     void setLength(double length) {
-
+        this.side = length;
     }
 
     @Override
     void setWidth(double width) {
-
+        this.side = width;
     }
 }
