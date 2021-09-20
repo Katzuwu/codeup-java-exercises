@@ -2,13 +2,13 @@ package grades;
 
 import java.util.ArrayList;
 
-public class Students {
+public class Student {
 	private final String name;
-	private static ArrayList<Integer> grades;
+	private ArrayList<Integer> grades;
 
-	public Students(String name){
+	public Student(String name){
 		this.name = name;
-		grades = new ArrayList<>();
+		this.grades = new ArrayList<>();
 	}
 
 	public String getName() {
@@ -16,25 +16,25 @@ public class Students {
 	}
 
 	public void addGrade(int grade){
-		grades.add(grade);
+		this.grades.add(grade);
 	}
 
 	public double getGradeAverage(){
 		double total = 0;
-		for (Integer grade : grades){
-			total += grade;
+		for(int i = 0; i < grades.size(); i++){
+			total += grades.get(i);
 		} return total / grades.size();
 	}
 
 	public static void main(String[] args) {
-		Students student = new Students("Tuna");
+		Student student = new Student("Tuna");
 		student.addGrade(68);
 		student.addGrade(85);
 		student.addGrade(93);
 		student.addGrade(75);
 		System.out.println(student.getGradeAverage());
 
-		Students tim = new Students("tim");
+		Student tim = new Student("tim");
 		tim.addGrade(99);
 		tim.addGrade(99);
 		tim.addGrade(99);

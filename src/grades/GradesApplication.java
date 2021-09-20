@@ -6,23 +6,23 @@ import java.util.Scanner;
 public class GradesApplication {
 
 	public static void main(String[] args) {
-		HashMap<String, Students> students = new HashMap<>();
-		Students jerry = new Students("Jerry");
+		HashMap<String, Student> students = new HashMap<>();
+		Student jerry = new Student("Jerry");
 		jerry.addGrade(90);
 		jerry.addGrade(95);
 		jerry.addGrade(98);
 
-		Students tom = new Students("Tom");
+		Student tom = new Student("Tom");
 		tom.addGrade(87);
 		tom.addGrade(89);
 		tom.addGrade(82);
 
-		Students spike = new Students("Spike");
+		Student spike = new Student("Spike");
 		spike.addGrade(70);
 		spike.addGrade(67);
 		spike.addGrade(75);
 
-		Students toodles = new Students("Toodles Galore");
+		Student toodles = new Student("Toodles Galore");
 		toodles.addGrade(93);
 		toodles.addGrade(87);
 		toodles.addGrade(89);
@@ -39,7 +39,7 @@ public class GradesApplication {
 
 	}
 
-	public static void searchStudents(HashMap<String, Students> students) {
+	public static void searchStudents(HashMap<String, Student> students) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Which user would you like to view?");
 		for (String key : students.keySet()) {
@@ -49,7 +49,7 @@ public class GradesApplication {
 		String usernameRequest = sc.nextLine();
 		if (students.containsKey(usernameRequest)) {
 			System.out.println("Name: " + students.get(usernameRequest).getName() + "\nGithub Username: " + usernameRequest + "\nGrade Average: " + students.get(usernameRequest).getGradeAverage());
-			System.out.println("Would you like to see another student?");
+			System.out.println("Would you like to see another student? [Y/N]");
 			String userYesOrNo = sc.nextLine();
 			if (userYesOrNo.equalsIgnoreCase("y") || userYesOrNo.equalsIgnoreCase("yes")){
 				searchStudents(students);
