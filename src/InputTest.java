@@ -12,13 +12,13 @@ public class InputTest {
 //        int userInt = input.getInt(1, 10);
 //        System.out.println(userInt);
 
-//        int usersInteger = input.getInt();
-//        System.out.println(usersInteger);
+        int usersInteger = input.getInt();
+        System.out.println(usersInteger);
 
 //        double usersInteger = input.getDouble(.1, 10.9);
 //        System.out.println(usersInteger);
 
-        double usersInteger = input.getDouble();
-        System.out.println(usersInteger);
+        double usersDouble = input.getDouble();
+        System.out.println(usersDouble);
     }
 }

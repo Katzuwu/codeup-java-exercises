@@ -5,7 +5,6 @@ public class Input {
     private Scanner scanner;
 
     public String getString(){
-        System.out.println("Give me a string.");
         return scanner.nextLine();
     }
 
@@ -29,8 +28,13 @@ public class Input {
     }
 
     public int getInt(){
-        System.out.println("Give me an integer.");
-        return scanner.nextInt();
+        try {
+            return Integer.valueOf(getString());
+        }
+        catch (NumberFormatException nfx){
+            System.out.println("Oh no! Looks like " + nfx + " isn't a valid integer.");
+        }
+        return 0;
     }
 
     public double getDouble(double min, double max){
@@ -43,8 +47,13 @@ public class Input {
     }
 
     public double getDouble(){
-        System.out.println("Give me an number with a decimal point.");
-        return scanner.nextDouble();
+        try {
+            return Double.valueOf(getString());
+        }
+        catch (NumberFormatException nfx){
+            System.out.println("Oops! Looks like " + nfx + " isn't a valid double.");
+        }
+        return 0;
     }
 
     public Input(){
