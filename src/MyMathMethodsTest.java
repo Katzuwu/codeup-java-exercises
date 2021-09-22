@@ -9,5 +9,7 @@ public class MyMathMethodsTest {
         //static
         System.out.println(MyMathMethods.multiply(10,10));
         System.out.println(MyMathMethods.multiply(10.5,10.5));
+
+        System.out.println(MyMathMethods.arraySum(new int[]{1,2,3,4,5,6}));
     }
 }

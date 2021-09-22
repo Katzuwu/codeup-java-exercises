@@ -16,4 +16,18 @@ public class MyMathMethods {
         return num1 * num2;
     }
 
+    public static int quotient(int num1, int num2){
+        return num1/num2;
+    }
+    public static double quotient(double num1, double num2){
+        return num1/num2;
+    }
+
+    public static int arraySum(int[] arr){
+        int total = 0;
+        for(Integer a : arr){
+            total += a;
+        } return total;
+    }
+
 }
