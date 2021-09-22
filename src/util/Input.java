@@ -32,9 +32,9 @@ public class Input {
             return Integer.valueOf(getString());
         }
         catch (NumberFormatException nfx){
-            System.out.println("Oh no! Looks like " + nfx + " isn't a valid integer.");
+            System.out.println("Oh no! Looks like " + nfx + " isn't a valid integer. Please try again.");
+            return getInt();
         }
-        return 0;
     }
 
     public double getDouble(double min, double max){
@@ -51,9 +51,9 @@ public class Input {
             return Double.valueOf(getString());
         }
         catch (NumberFormatException nfx){
-            System.out.println("Oops! Looks like " + nfx + " isn't a valid double.");
+            System.out.println("Oops! Looks like " + nfx + " isn't a valid double. Please try again.");
+            return getDouble();
         }
-        return 0;
     }
 
     public Input(){
