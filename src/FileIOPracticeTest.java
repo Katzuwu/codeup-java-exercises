@@ -1,5 +1,8 @@
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
 
@@ -40,6 +43,12 @@ public class FileIOPracticeTest {
 //			System.out.println(item);
 //		}
 		FileIOPractice practice = new FileIOPractice();
+		practice.readFileAndOutput(filePath);
+		try {
+			Files.writeString(filePath, "Messalina\n", StandardOpenOption.APPEND);
+		} catch (IOException iox){
+			iox.printStackTrace();
+		}
 		practice.readFileAndOutput(filePath);
 	}
 }
