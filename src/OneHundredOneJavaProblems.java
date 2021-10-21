@@ -9,9 +9,14 @@ public int addInts(int num1, int num2){
     return num1 + num2;
 }
 //3. Create a method, intToLong, that takes in an integer and returns the same number as a long data type
-//4. Create a method numericStringToDouble that takes in a numeric string and
-//    returns the number value as a double.
-//            5. Create a method, doubleToFloat, that takes in a double and returns the number as a float. Assume that the input values will fit within a double data type.
+	public long intToLong(int num){
+	return (long)num;
+	}
+//4. Create a method numericStringToDouble that takes in a numeric string and returns the number value as a double.
+	public double numericStringToDouble(String number){
+	return Double.parseDouble(number);
+	}
+//5. Create a method, doubleToFloat, that takes in a double and returns the number as a float. Assume that the input values will fit within a double data type.
 //6. Create a method, firstChar, that takes in a string and returns the first character of the string.
 //7. Create a method, lastChar, that takes in a string and returns the last character of the string.
 //8. Create a method, capFirst, that takes in a string and returns the string with the first letter capitalized and all other letters in lowercase.
