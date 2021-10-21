@@ -1,14 +1,27 @@
 import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.Locale;
 
 //almost done. just need to import swapCase;
 public class JavaDrills {
-//	public static String flipOuterCase(String str){
-//		String first = str.substring(0, 1).swapCase;
-//		String last = str.substring((str.length() - 1)).toUpperCase();
-//		String middle = str.substring(1, str.length() - 1);
-//		return first + middle + last;
-//	}
+	public static String flipOuterCase(String str){
+		char[] chars = str.toCharArray();
+
+		for (int i = 0; i < chars.length; i++) {
+			char c = chars[i];
+			boolean firstOrLastChar = chars[i] == chars[0] || chars[i] == chars[chars.length - 1];
+			if (Character.isUpperCase(c)) {
+				if (firstOrLastChar) {
+					chars[i] = Character.toLowerCase(c);
+				}
+			} else if (Character.isLowerCase(c)) {
+				if (firstOrLastChar) {
+					chars[i] = Character.toUpperCase(c);
+				}
+			}
+		}
+		return new String(chars);
+	}
 
 //	Create a static method, returnTotalDifference, that takes in two lists of integers and returns the difference between the sum of all integers in the first list minus the sum of all integers in the second list.
 	public static int returnTotalDifference(List<Integer> arr1, List<Integer> arr2){
@@ -21,15 +34,39 @@ public class JavaDrills {
 		return arr1Total - arr2Total;
 	}
 
+//	Create a public static method, `flipInnerCase`, that takes in a string and returns the string
+//	with the case of all letters reversed EXCEPT for the first and last letters. Assume the input will be three or more characters long.
+	public static String flipInnerCase(String str) {
+	 char[] chars = str.toCharArray();
+
+        for (int i = 0; i < chars.length; i++) {
+            char c = chars[i];
+            boolean middleChars = chars[i] != chars[0] && chars[i] != chars[chars.length - 1];
+            if (Character.isUpperCase(c)) {
+                if (middleChars) {
+                    chars[i] = Character.toLowerCase(c);
+                }
+            } else if (Character.isLowerCase(c)) {
+                if (middleChars) {
+                    chars[i] = Character.toUpperCase(c);
+                }
+            }
+        }
+        return new String(chars);
+	}
 	public static void main(String[] args) {
 //		System.out.println(flipOuterCase("cat")); // CaT
 //		System.out.println(flipOuterCase("CaT")); // cat
 //		System.out.println(flipOuterCase("caT")); // Cat
 //		System.out.println(flipOuterCase("cAt")); // CAT
-		System.out.println(returnTotalDifference(Arrays.asList(10, 2, 3), Arrays.asList(1, 2, 3)));
-		System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7)));
-		System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7, 1)));
-
+//		System.out.println(returnTotalDifference(Arrays.asList(10, 2, 3), Arrays.asList(1, 2, 3)));
+//		System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7)));
+//		System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7, 1)));
+		System.out.println(flipInnerCase("cat")); // cAt
+		System.out.println(flipInnerCase("CaT")); // CAT
+		System.out.println(flipInnerCase("caT")); // cAT
+		System.out.println(flipInnerCase("codeup")); // cODEUp
+		System.out.println(flipInnerCase("CoDeup")); // COdEUp
 
 	}
 }
