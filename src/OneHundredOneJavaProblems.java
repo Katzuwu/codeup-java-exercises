@@ -17,7 +17,13 @@ public int addInts(int num1, int num2){
 	return Double.parseDouble(number);
 	}
 //5. Create a method, doubleToFloat, that takes in a double and returns the number as a float. Assume that the input values will fit within a double data type.
+	public float doubleToFloat(String number){
+	return Float.parseFloat(number);
+	}
 //6. Create a method, firstChar, that takes in a string and returns the first character of the string.
+	public String firstChar(String str){
+	return str.substring(0, 1);
+	}
 //7. Create a method, lastChar, that takes in a string and returns the last character of the string.
 //8. Create a method, capFirst, that takes in a string and returns the string with the first letter capitalized and all other letters in lowercase.
 //            9. Create a method, sameFirstAndLast, that takes in a string and returns true if the first and last character match (not case sensitive).

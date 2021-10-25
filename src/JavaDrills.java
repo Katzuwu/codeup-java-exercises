@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.*;
 import java.util.Locale;
 
-//almost done. just need to import swapCase;
+
 public class JavaDrills {
 	public static String flipOuterCase(String str){
 		char[] chars = str.toCharArray();
