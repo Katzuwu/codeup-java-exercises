@@ -1,4 +1,8 @@
 public class OneHundredOneJavaProblems {
+	public static void main(String[] args) {
+		System.out.println(capFirst("hello"));
+		System.out.println(sameFirstAndLast("Owo"));
+	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
 public String returnHelloWorld(){
@@ -21,14 +25,26 @@ public int addInts(int num1, int num2){
 	return Float.parseFloat(number);
 	}
 //6. Create a method, firstChar, that takes in a string and returns the first character of the string.
-	public String firstChar(String str){
+	public static String firstChar(String str){
 	return str.substring(0, 1);
 	}
 //7. Create a method, lastChar, that takes in a string and returns the last character of the string.
+	public static String lastChar(String str){
+	return str.substring(str.length() -1);
+	}
 //8. Create a method, capFirst, that takes in a string and returns the string with the first letter capitalized and all other letters in lowercase.
-//            9. Create a method, sameFirstAndLast, that takes in a string and returns true if the first and last character match (not case sensitive).
-//            10. Create a method, sameCase, that takes in two strings. Assume both strings are the same length and only contain letters. The method should return true if both strings share the same sequence letter case.
-//            11. Create a method, combineChars, that takes in two char inputs and returns a string combining them in numeric/alphabetical order. If a combination of a letter and number, the number will come first.
+	public static String capFirst(String str){
+	String first = firstChar(str);
+	String restOfString = str.substring(1);
+	return first.toUpperCase() + restOfString;
+	}
+//9. Create a method, sameFirstAndLast, that takes in a string and returns true if the first and last character match (not case sensitive).
+	public static boolean sameFirstAndLast(String str){
+		return firstChar(str).equalsIgnoreCase(lastChar(str));
+	}
+//10. Create a method, sameCase, that takes in two strings. Assume both strings are the same length and only contain letters. The method should return true if both strings share the same sequence letter case.
+//11. Create a method, combineChars, that takes in two char inputs and returns a string combining them in numeric/alphabetical order. If a combination of a letter and number, the number will come first.
+
 //            12. Create a method, containsSumOfFour, that takes in a string containing any sequence of letters and numbers. If all numbers in the string add up to four, return true, otherwise, return false.
 //            13. Create a method, isPrime, that takes in a positive integer and returns if the integer is a prime number.
 //            14. Create a method, nextPrime, that takes in a positive integer and returns the next highest prime number.
