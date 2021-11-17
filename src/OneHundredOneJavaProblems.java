@@ -1,7 +1,11 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class OneHundredOneJavaProblems {
 	public static void main(String[] args) {
 		System.out.println(capFirst("hello"));
 		System.out.println(sameFirstAndLast("Owo"));
+		System.out.println(Arrays.toString(oneMore(new int[]{1, 2, 3}, 4)));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -55,6 +59,13 @@ public int addInts(int num1, int num2){
 //19. Using overloading, create several methods called combine, that will return the sum of two integers, the product of two bytes, the concatenation of two chars, the longer string of two strings, and the result of two booleans combined with an AND logical operator.
 //20. Create a method, returnLongerArray, that takes in two arrays of integers and returns the longest array.
 //            21. Create a method, oneMore, that takes in two inputs, an array of integers and a single integer. The method will return another array of integers with the same values of the first array and an additional integer element of the second input.
+	public static int[] oneMore(int[] arr, int intToAdd) {
+		int n = arr.length;
+		int[] newArr = new int[n + 1];
+		System.arraycopy(arr, 0, newArr, 0, n);
+		newArr[n] = intToAdd;
+		return newArr;
+	}
 //22. Create a method, javaPop, that takes in an array of any primitive type and returns the same array of that datatype with the last element removed. Method overloading will be needed. If only one element is present, return an empty array.
 //23. Create a method, javaShift, that takes in an array of any primitive data type and returns the the array with the first element removed. Method overloading will be needed. If only one element is present, return an empty array.
 //24. Create a method, stringToCharArray, that takes in a string and returns the characters of the string as an array.
