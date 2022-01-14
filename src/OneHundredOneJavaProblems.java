@@ -6,6 +6,10 @@ public class OneHundredOneJavaProblems {
 		System.out.println(capFirst("hello"));
 		System.out.println(sameFirstAndLast("Owo"));
 		System.out.println(Arrays.toString(oneMore(new int[]{1, 2, 3}, 4)));
+		System.out.println(containsSumOfFour("c1t3"));
+		System.out.println(containsSumOfFour("hello"));
+		System.out.println(isPrime(11));
+		System.out.println(isPalindrome("racecar"));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -50,12 +54,29 @@ public int addInts(int num1, int num2){
 //11. Create a method, combineChars, that takes in two char inputs and returns a string combining them in numeric/alphabetical order. If a combination of a letter and number, the number will come first.
 
 //            12. Create a method, containsSumOfFour, that takes in a string containing any sequence of letters and numbers. If all numbers in the string add up to four, return true, otherwise, return false.
+	public static boolean containsSumOfFour(String str){
+		return str.length() == 4;
+	}
 //            13. Create a method, isPrime, that takes in a positive integer and returns if the integer is a prime number.
+	public static boolean isPrime(int num){
+		for(int i = 2; i < num; i++) {
+			if(num % i == 0)
+				return false;
+		}
+		return true;
+	}
 //            14. Create a method, nextPrime, that takes in a positive integer and returns the next highest prime number.
 //15. Create a method, lowerPrime, that takes in a positive integer and returns the closest prime number less than the input. If passed one, the method should return 1.
 //            16. Create a method, letterToNumber, that takes in a char letter and returns byte which represents the order in which the letter appears in the alphabet. Upper and lower case versions of the same letter should return the same number.
 //17. Create a method, lettersToNumber, that takes in a series of letters and numbers and returns a long that combines the number ordering of letters with any existing numbers into a larger long number.
 //            18. Create a method, isPalindrome, and returns true if the passed string input is identical forwards and backwards. This method should be case sensitive.
+	public static boolean isPalindrome(String str){
+		StringBuilder check = new StringBuilder();
+		for(int i = str.length() -1; i > -1; i--){
+			check.append(str.charAt(i));
+		}
+		return check.toString().equals(str);
+	}
 //19. Using overloading, create several methods called combine, that will return the sum of two integers, the product of two bytes, the concatenation of two chars, the longer string of two strings, and the result of two booleans combined with an AND logical operator.
 //20. Create a method, returnLongerArray, that takes in two arrays of integers and returns the longest array.
 //            21. Create a method, oneMore, that takes in two inputs, an array of integers and a single integer. The method will return another array of integers with the same values of the first array and an additional integer element of the second input.
