@@ -1,5 +1,9 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
+import javax.sound.sampled.SourceDataLine;
 
 public class OneHundredOneJavaProblems {
 	public static void main(String[] args) {
@@ -10,6 +14,9 @@ public class OneHundredOneJavaProblems {
 		System.out.println(containsSumOfFour("hello"));
 		System.out.println(isPrime(11));
 		System.out.println(isPalindrome("racecar"));
+		ArrayList<String> places = new ArrayList<>(Arrays.asList("Buenos Aires", "Córdoba", "La Plata"));
+		System.out.println(reverseValues(places));
+		System.out.println(stringToCharArray("str"));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -90,6 +97,16 @@ public int addInts(int num1, int num2){
 //22. Create a method, javaPop, that takes in an array of any primitive type and returns the same array of that datatype with the last element removed. Method overloading will be needed. If only one element is present, return an empty array.
 //23. Create a method, javaShift, that takes in an array of any primitive data type and returns the the array with the first element removed. Method overloading will be needed. If only one element is present, return an empty array.
 //24. Create a method, stringToCharArray, that takes in a string and returns the characters of the string as an array.
+	public static char[] stringToCharArray(String str){
+		char[] arr = new char[str.length()];
+		for(int i = 0; i < str.length(); i++){
+			arr[i] = str.charAt(i);
+		}
+		for(char character : arr){
+			System.out.println(character);
+		}
+		return arr;
+	}
 //25. Create a method, sumInts, that takes in an array of integers and returns the sum of all integers.
 //            26. Create a method, remove7s, that takes in a list of integers and removes any number sevens and returns the list.
 //            27. Create a method, intArrayToArrayList, that takes in an array of integers and returns an array list of integers.
@@ -101,6 +118,14 @@ public int addInts(int num1, int num2){
 //  "noOfCs" - containing the number of c's in the pass in string (case insensitive)
 //            "indexOfFirstVowel" - containing the index number within the string of the first vowel
 //32. Create a method, reverseValues, that takes in an arraylist of string values and returns the arraylist with each string in reverse-order
+	public static ArrayList<String> reverseValues(ArrayList<String> arr){
+		ArrayList<String> newList = new ArrayList<>(arr.size());
+		for (int i = 0; i < arr.size(); i++) {
+            String wordToAdd = new StringBuilder(arr.get(i)).reverse().toString();
+			newList.add(wordToAdd);
+        }
+		return newList;
+	}
 //33. Create a method, progressUpMusicKeys, that takes in a letter char and an integer number of how many keys up or down from a given a "key"/"note" the output letter char will be. The musical alphabet is made of the letters A-G. One letter below A will be G. One letter above G will be A.
 //34. Create a method, hashKeysToList, that takes in a hash map and returns the keys of the map as an array list in alphabetical order.
 //            35. Create a method, intToByte, that takes in an integer and returns the value as a byte. If the byte value is not the same as the integer due to overflow, throw a custom exception called ValueMismatchException. The exception should extend from exception and should not be handled by a try catch in the method.
