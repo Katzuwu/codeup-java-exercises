@@ -1,6 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.sound.sampled.SourceDataLine;
@@ -17,6 +18,13 @@ public class OneHundredOneJavaProblems {
 		ArrayList<String> places = new ArrayList<>(Arrays.asList("Buenos Aires", "Córdoba", "La Plata"));
 		System.out.println(reverseValues(places));
 		System.out.println(stringToCharArray("str"));
+		System.out.println(sumInts(new int[]{1,2,3,4,5}));
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(7);
+		list.add(9);
+		list.add(7);
+		list.add(4);
+		System.out.println(remove7s(list));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -108,7 +116,23 @@ public int addInts(int num1, int num2){
 		return arr;
 	}
 //25. Create a method, sumInts, that takes in an array of integers and returns the sum of all integers.
+	public static int sumInts(int[] arr){
+		int total = 0;
+		for(int num : arr){
+			total += num;
+		}
+		return total;
+	}
 //            26. Create a method, remove7s, that takes in a list of integers and removes any number sevens and returns the list.
+	public static List<Integer> remove7s(List<Integer> list){
+		Iterator itr = list.iterator();
+        while (itr.hasNext()) {
+            int x = (Integer)itr.next();
+            if (x == 7)
+                itr.remove();
+        }
+		return list;
+	}
 //            27. Create a method, intArrayToArrayList, that takes in an array of integers and returns an array list of integers.
 //            28. Create a method, listsToMap, that takes in to arraylists of the same length and creates a hashmap with keys matching the first arraylist, set to values matching the second arraylist.
 //29. Create a method, sameMapValues, that takes in a hashmap and returns true if any keys have matching values, and false if all keys have unique values. Assume the hash map has string keys and integer values.
