@@ -1,4 +1,6 @@
 import java.lang.reflect.Array;
+import java.text.CharacterIterator;
+import java.text.StringCharacterIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -25,6 +27,10 @@ public class OneHundredOneJavaProblems {
 		list.add(7);
 		list.add(4);
 		System.out.println(remove7s(list));
+		System.out.println(sameCase("StRiNG", "HeLlOO"));
+		char ch1 = 'z';
+		char ch2 = 'y';
+		System.out.println(combineChars(ch1, ch2));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -66,8 +72,28 @@ public int addInts(int num1, int num2){
 		return firstChar(str).equalsIgnoreCase(lastChar(str));
 	}
 //10. Create a method, sameCase, that takes in two strings. Assume both strings are the same length and only contain letters. The method should return true if both strings share the same sequence letter case.
+	public static boolean sameCase(String str1, String str2){
+		for(int i = 0; i < str1.length(); i++){
+			if(Character.isUpperCase(str1.charAt(i)) != Character.isUpperCase(str2.charAt(i)) || Character.isLowerCase(str1.charAt(i)) != Character.isLowerCase(str1.charAt(i))){
+				return false;
+			}
+		}
+		return true;
+	}
 //11. Create a method, combineChars, that takes in two char inputs and returns a string combining them in numeric/alphabetical order. If a combination of a letter and number, the number will come first.
-
+	public static String combineChars(char ch1, char ch2){
+		StringBuilder str = new StringBuilder();
+		if(Character.isDigit(ch1)){
+			str.append(ch1).append(ch2);
+		} else if(Character.isDigit(ch2)){
+			str.append(ch2).append(ch1);
+		} else if(Character.compare(ch1, ch2) < 0){
+			str.append(ch1).append(ch2);
+		} else if(Character.compare(ch1, ch2) > 0){
+			str.append(ch2).append(ch1);
+		}
+		return str.toString();
+	}
 //            12. Create a method, containsSumOfFour, that takes in a string containing any sequence of letters and numbers. If all numbers in the string add up to four, return true, otherwise, return false.
 	public static boolean containsSumOfFour(String str){
 		return str.length() == 4;
