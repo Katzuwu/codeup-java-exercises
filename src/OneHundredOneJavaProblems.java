@@ -31,6 +31,8 @@ public class OneHundredOneJavaProblems {
 		char ch1 = 'z';
 		char ch2 = 'y';
 		System.out.println(combineChars(ch1, ch2));
+		System.out.println(nextPrime(7));
+		System.out.println(lowerPrime(11));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -107,7 +109,30 @@ public int addInts(int num1, int num2){
 		return true;
 	}
 //            14. Create a method, nextPrime, that takes in a positive integer and returns the next highest prime number.
+	public static int nextPrime(int num){
+      for (int i = 2; i < num; i++) {
+         if(!isPrime(num)) {
+            num++;
+            i=2;
+         } else {
+            continue;
+         }
+      }
+      return num;
+	}
 //15. Create a method, lowerPrime, that takes in a positive integer and returns the closest prime number less than the input. If passed one, the method should return 1.
+	public static int lowerPrime(int num){
+		if(num == 1){
+			return 1;
+		} else {
+			for(int i = num - 1; i >= 2; i--){
+				if(isPrime(i)){
+					num = i;
+					break;
+				}
+			} return num;
+		}
+	}
 //            16. Create a method, letterToNumber, that takes in a char letter and returns byte which represents the order in which the letter appears in the alphabet. Upper and lower case versions of the same letter should return the same number.
 //17. Create a method, lettersToNumber, that takes in a series of letters and numbers and returns a long that combines the number ordering of letters with any existing numbers into a larger long number.
 //            18. Create a method, isPalindrome, and returns true if the passed string input is identical forwards and backwards. This method should be case sensitive.
