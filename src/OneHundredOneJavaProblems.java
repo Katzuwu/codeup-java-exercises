@@ -3,6 +3,7 @@ import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -33,6 +34,10 @@ public class OneHundredOneJavaProblems {
 		System.out.println(combineChars(ch1, ch2));
 		System.out.println(nextPrime(7));
 		System.out.println(lowerPrime(11));
+		System.out.println(lowerPrime(11));
+		ArrayList<String> strList = new ArrayList<String>(Arrays.asList("This", "is", "new"));
+		ArrayList<String> strList2 = new ArrayList<String>(Arrays.asList("Hello", "hey", "hi"));
+		System.out.println(Arrays.asList(listsToMap(strList, strList2)));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -110,8 +115,9 @@ public int addInts(int num1, int num2){
 	}
 //            14. Create a method, nextPrime, that takes in a positive integer and returns the next highest prime number.
 	public static int nextPrime(int num){
+		num++;
       for (int i = 2; i < num; i++) {
-         if(!isPrime(num)) {
+         if(num % i == 0) {
             num++;
             i=2;
          } else {
@@ -186,6 +192,14 @@ public int addInts(int num1, int num2){
 	}
 //            27. Create a method, intArrayToArrayList, that takes in an array of integers and returns an array list of integers.
 //            28. Create a method, listsToMap, that takes in to arraylists of the same length and creates a hashmap with keys matching the first arraylist, set to values matching the second arraylist.
+	public static HashMap<String, String> listsToMap(ArrayList<String> arr1, ArrayList<String> arr2){
+		HashMap<String, String> map = new HashMap<>();
+		for(int i = 0; i < arr1.size(); i++){
+			map.put(arr1.get(i), arr2.get(i));
+		}
+		return map;
+	}
+	
 //29. Create a method, sameMapValues, that takes in a hashmap and returns true if any keys have matching values, and false if all keys have unique values. Assume the hash map has string keys and integer values.
 //            30. Create a method, concatTwoMapValues, that takes in three inputs total: a hashmap with string keys and string inputs, and two string inputs. The method will return the concatenation of the values of hash map at the keys that match with the string inputs. If no key is found on the hash map matching with one or both of the passed in string inputs, an empty string will be concatentated.
 //31. Create a method, getStringInfo, that takes in a string and returns a hashmap with the following keys:
