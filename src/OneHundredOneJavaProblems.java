@@ -37,7 +37,7 @@ public class OneHundredOneJavaProblems {
 		System.out.println(lowerPrime(11));
 		ArrayList<String> strList = new ArrayList<String>(Arrays.asList("This", "is", "new"));
 		ArrayList<String> strList2 = new ArrayList<String>(Arrays.asList("Hello", "hey", "hi"));
-		System.out.println(Arrays.asList(listsToMap(strList, strList2)));
+		System.out.println(listsToMap(strList, strList2));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -193,7 +193,7 @@ public int addInts(int num1, int num2){
 //            27. Create a method, intArrayToArrayList, that takes in an array of integers and returns an array list of integers.
 //            28. Create a method, listsToMap, that takes in to arraylists of the same length and creates a hashmap with keys matching the first arraylist, set to values matching the second arraylist.
 	public static HashMap<String, String> listsToMap(ArrayList<String> arr1, ArrayList<String> arr2){
-		HashMap<String, String> map = new HashMap<>();
+		HashMap<String, String> map = new HashMap<String, String>();
 		for(int i = 0; i < arr1.size(); i++){
 			map.put(arr1.get(i), arr2.get(i));
 		}
