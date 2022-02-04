@@ -4,40 +4,49 @@ import java.text.StringCharacterIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import javax.sound.sampled.SourceDataLine;
 
 public class OneHundredOneJavaProblems {
 	public static void main(String[] args) {
-		System.out.println(capFirst("hello"));
-		System.out.println(sameFirstAndLast("Owo"));
-		System.out.println(Arrays.toString(oneMore(new int[]{1, 2, 3}, 4)));
-		System.out.println(containsSumOfFour("c1t3"));
-		System.out.println(containsSumOfFour("hello"));
-		System.out.println(isPrime(11));
-		System.out.println(isPalindrome("racecar"));
-		ArrayList<String> places = new ArrayList<>(Arrays.asList("Buenos Aires", "Córdoba", "La Plata"));
-		System.out.println(reverseValues(places));
-		System.out.println(stringToCharArray("str"));
-		System.out.println(sumInts(new int[]{1,2,3,4,5}));
-		List<Integer> list = new ArrayList<Integer>();
-		list.add(7);
-		list.add(9);
-		list.add(7);
-		list.add(4);
-		System.out.println(remove7s(list));
-		System.out.println(sameCase("StRiNG", "HeLlOO"));
-		char ch1 = 'z';
-		char ch2 = 'y';
-		System.out.println(combineChars(ch1, ch2));
-		System.out.println(nextPrime(7));
-		System.out.println(lowerPrime(11));
-		System.out.println(lowerPrime(11));
-		ArrayList<String> strList = new ArrayList<String>(Arrays.asList("This", "is", "new"));
-		ArrayList<String> strList2 = new ArrayList<String>(Arrays.asList("Hello", "hey", "hi"));
-		System.out.println(listsToMap(strList, strList2));
+		//System.out.println(capFirst("hello"));
+		//System.out.println(sameFirstAndLast("Owo"));
+		//System.out.println(Arrays.toString(oneMore(new int[]{1, 2, 3}, 4)));
+		//System.out.println(containsSumOfFour("c1t3"));
+		//System.out.println(containsSumOfFour("hello"));
+		//System.out.println(isPrime(11));
+		//System.out.println(isPalindrome("racecar"));
+		//ArrayList<String> places = new ArrayList<>(Arrays.asList("Buenos Aires", "Córdoba", "La Plata"));
+		//System.out.println(reverseValues(places));
+		//System.out.println(stringToCharArray("str"));
+		//System.out.println(sumInts(new int[]{1,2,3,4,5}));
+		//List<Integer> list = new ArrayList<Integer>();
+		//list.add(7);
+		//list.add(9);
+		//list.add(7);
+		//list.add(4);
+		//System.out.println(remove7s(list));
+		//System.out.println(sameCase("StRiNG", "HeLlOO"));
+		//char ch1 = 'z';
+		//char ch2 = 'y';
+		//System.out.println(combineChars(ch1, ch2));
+		//System.out.println(nextPrime(7));
+		//System.out.println(lowerPrime(11));
+		//System.out.println(lowerPrime(11));
+		//ArrayList<String> strList = new ArrayList<String>(Arrays.asList("This", "is", "new"));
+		//ArrayList<String> strList2 = new ArrayList<String>(Arrays.asList("Hello", "hey", "hi"));
+		//System.out.println(listsToMap(strList, strList2));
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		map.put("hi", 1);
+		map.put("hello", 2);
+		map.put("hola", 3);
+		map.put("hey", 4);
+		System.out.println(sameMapValues(map));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -201,6 +210,20 @@ public int addInts(int num1, int num2){
 	}
 	
 //29. Create a method, sameMapValues, that takes in a hashmap and returns true if any keys have matching values, and false if all keys have unique values. Assume the hash map has string keys and integer values.
+	public static boolean sameMapValues(HashMap<String, Integer> map){
+		boolean checker = false;
+		List<Integer> list = new ArrayList<Integer>(map.values());
+		for(int i = 0; i < list.size() - 1; i++){
+			int num = 0;
+			if(list.contains(num)){
+				num++;
+				i = 0;
+			} else {
+				checker = true;
+			}
+		}
+		return checker;
+	}
 //            30. Create a method, concatTwoMapValues, that takes in three inputs total: a hashmap with string keys and string inputs, and two string inputs. The method will return the concatenation of the values of hash map at the keys that match with the string inputs. If no key is found on the hash map matching with one or both of the passed in string inputs, an empty string will be concatentated.
 //31. Create a method, getStringInfo, that takes in a string and returns a hashmap with the following keys:
 //            "length" - containing the length of the passed in string
