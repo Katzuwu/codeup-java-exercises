@@ -3,6 +3,7 @@ import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -44,7 +45,7 @@ public class OneHundredOneJavaProblems {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		map.put("hi", 1);
 		map.put("hello", 2);
-		map.put("hola", 3);
+		map.put("hola", 2);
 		map.put("hey", 4);
 		System.out.println(sameMapValues(map));
 	}
@@ -211,18 +212,9 @@ public int addInts(int num1, int num2){
 	
 //29. Create a method, sameMapValues, that takes in a hashmap and returns true if any keys have matching values, and false if all keys have unique values. Assume the hash map has string keys and integer values.
 	public static boolean sameMapValues(HashMap<String, Integer> map){
-		boolean checker = false;
-		List<Integer> list = new ArrayList<Integer>(map.values());
-		for(int i = 0; i < list.size() - 1; i++){
-			int num = 0;
-			if(list.contains(num)){
-				num++;
-				i = 0;
-			} else {
-				checker = true;
-			}
-		}
-		return checker;
+		Collection<Integer> valuesList = map.values();
+		Set<Integer> valuesSet = new HashSet<Integer>(map.values());
+		return valuesList.size() != valuesSet.size();
 	}
 //            30. Create a method, concatTwoMapValues, that takes in three inputs total: a hashmap with string keys and string inputs, and two string inputs. The method will return the concatenation of the values of hash map at the keys that match with the string inputs. If no key is found on the hash map matching with one or both of the passed in string inputs, an empty string will be concatentated.
 //31. Create a method, getStringInfo, that takes in a string and returns a hashmap with the following keys:
