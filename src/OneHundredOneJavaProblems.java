@@ -49,6 +49,7 @@ public class OneHundredOneJavaProblems {
 		//map.put("hey", 4);
 		//System.out.println(sameMapValues(map));
 		System.out.println(getStringInfo("ccccccoo"));
+		System.out.println(Arrays.toString(javaPop(new int[]{1, 2, 3, 4})));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -171,6 +172,31 @@ public int addInts(int num1, int num2){
 		return newArr;
 	}
 //22. Create a method, javaPop, that takes in an array of any primitive type and returns the same array of that datatype with the last element removed. Method overloading will be needed. If only one element is present, return an empty array.
+	public static int[] javaPop(int[] arr){
+		int [] arrCopy = new int[arr.length -1];
+		System.arraycopy(arr, 0, arrCopy, 0, arr.length - 1);
+		return arrCopy;
+	}
+	public static String[] javaPop(String[] arr){
+		String [] arrCopy = new String[arr.length -1];
+		System.arraycopy(arr, 0, arrCopy, 0, arr.length - 1);
+		return arrCopy;
+	}
+	public static char[] javaPop(char[] arr){
+		char [] arrCopy = new char[arr.length -1];
+		System.arraycopy(arr, 0, arrCopy, 0, arr.length - 1);
+		return arrCopy;
+	}
+	public static double[] javaPop(double[] arr){
+		double [] arrCopy = new double[arr.length -1];
+		System.arraycopy(arr, 0, arrCopy, 0, arr.length - 1);
+		return arrCopy;
+	}
+	public static long[] javaPop(long[] arr){
+		long [] arrCopy = new long[arr.length -1];
+		System.arraycopy(arr, 0, arrCopy, 0, arr.length - 1);
+		return arrCopy;
+	}
 //23. Create a method, javaShift, that takes in an array of any primitive data type and returns the array with the first element removed. Method overloading will be needed. If only one element is present, return an empty array.
 //24. Create a method, stringToCharArray, that takes in a string and returns the characters of the string as an array.
 	public static char[] stringToCharArray(String str){
