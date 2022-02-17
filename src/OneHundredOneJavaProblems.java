@@ -42,12 +42,13 @@ public class OneHundredOneJavaProblems {
 		//ArrayList<String> strList = new ArrayList<String>(Arrays.asList("This", "is", "new"));
 		//ArrayList<String> strList2 = new ArrayList<String>(Arrays.asList("Hello", "hey", "hi"));
 		//System.out.println(listsToMap(strList, strList2));
-		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		map.put("hi", 1);
-		map.put("hello", 2);
-		map.put("hola", 2);
-		map.put("hey", 4);
-		System.out.println(sameMapValues(map));
+		//HashMap<String, Integer> map = new HashMap<String, Integer>();
+		//map.put("hi", 1);
+		//map.put("hello", 2);
+		//map.put("hola", 2);
+		//map.put("hey", 4);
+		//System.out.println(sameMapValues(map));
+		System.out.println(getStringInfo("ccccccoo"));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -221,6 +222,26 @@ public int addInts(int num1, int num2){
 //            "length" - containing the length of the passed in string
 //  "noOfCs" - containing the number of c's in the pass in string (case insensitive)
 //            "indexOfFirstVowel" - containing the index number within the string of the first vowel
+	public static HashMap<String, Integer> getStringInfo(String str){
+		int cCount = 0;
+		String vowels = "aeiouAEIOU";
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		map.put("length", str.length());
+		for(char character : str.toCharArray()){
+			if(character == 'c'){
+				cCount++;
+			}
+		}
+		map.put("noOfCs", cCount);
+		for (int i = 0; i < str.length(); i++)
+    {
+        if (vowels.contains(String.valueOf(str.charAt(i)))){
+            map.put("indexOfFirstVowel", i);
+			break;
+        }
+    }
+		return map;
+	}
 //32. Create a method, reverseValues, that takes in an arraylist of string values and returns the arraylist with each string in reverse-order
 	public static ArrayList<String> reverseValues(ArrayList<String> arr){
 		ArrayList<String> newList = new ArrayList<>(arr.size());
