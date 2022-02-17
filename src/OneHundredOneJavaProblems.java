@@ -124,7 +124,7 @@ public int addInts(int num1, int num2){
 		}
 		return true;
 	}
-//            14. Create a method, nextPrime, that takes in a positive integer and returns the next highest prime number.
+//14. Create a method, nextPrime, that takes in a positive integer and returns the next highest prime number.
 	public static int nextPrime(int num){
 		num++;
       for (int i = 2; i < num; i++) {
@@ -150,9 +150,9 @@ public int addInts(int num1, int num2){
 			} return num;
 		}
 	}
-//            16. Create a method, letterToNumber, that takes in a char letter and returns byte which represents the order in which the letter appears in the alphabet. Upper and lower case versions of the same letter should return the same number.
+// 16. Create a method, letterToNumber, that takes in a char letter and returns byte which represents the order in which the letter appears in the alphabet. Upper and lower case versions of the same letter should return the same number.
 //17. Create a method, lettersToNumber, that takes in a series of letters and numbers and returns a long that combines the number ordering of letters with any existing numbers into a larger long number.
-//            18. Create a method, isPalindrome, and returns true if the passed string input is identical forwards and backwards. This method should be case sensitive.
+//18. Create a method, isPalindrome, and returns true if the passed string input is identical forwards and backwards. This method should be case sensitive.
 	public static boolean isPalindrome(String str){
 		StringBuilder check = new StringBuilder();
 		for(int i = str.length() -1; i > -1; i--){
@@ -162,7 +162,7 @@ public int addInts(int num1, int num2){
 	}
 //19. Using overloading, create several methods called combine, that will return the sum of two integers, the product of two bytes, the concatenation of two chars, the longer string of two strings, and the result of two booleans combined with an AND logical operator.
 //20. Create a method, returnLongerArray, that takes in two arrays of integers and returns the longest array.
-//            21. Create a method, oneMore, that takes in two inputs, an array of integers and a single integer. The method will return another array of integers with the same values of the first array and an additional integer element of the second input.
+//21. Create a method, oneMore, that takes in two inputs, an array of integers and a single integer. The method will return another array of integers with the same values of the first array and an additional integer element of the second input.
 	public static int[] oneMore(int[] arr, int intToAdd) {
 		int n = arr.length;
 		int[] newArr = new int[n + 1];
@@ -171,7 +171,7 @@ public int addInts(int num1, int num2){
 		return newArr;
 	}
 //22. Create a method, javaPop, that takes in an array of any primitive type and returns the same array of that datatype with the last element removed. Method overloading will be needed. If only one element is present, return an empty array.
-//23. Create a method, javaShift, that takes in an array of any primitive data type and returns the the array with the first element removed. Method overloading will be needed. If only one element is present, return an empty array.
+//23. Create a method, javaShift, that takes in an array of any primitive data type and returns the array with the first element removed. Method overloading will be needed. If only one element is present, return an empty array.
 //24. Create a method, stringToCharArray, that takes in a string and returns the characters of the string as an array.
 	public static char[] stringToCharArray(String str){
 		char[] arr = new char[str.length()];
@@ -245,10 +245,10 @@ public int addInts(int num1, int num2){
 //32. Create a method, reverseValues, that takes in an arraylist of string values and returns the arraylist with each string in reverse-order
 	public static ArrayList<String> reverseValues(ArrayList<String> arr){
 		ArrayList<String> newList = new ArrayList<>(arr.size());
-		for (int i = 0; i < arr.size(); i++) {
-            String wordToAdd = new StringBuilder(arr.get(i)).reverse().toString();
+		for (String s : arr) {
+			String wordToAdd = new StringBuilder(s).reverse().toString();
 			newList.add(wordToAdd);
-        }
+		}
 		return newList;
 	}
 //33. Create a method, progressUpMusicKeys, that takes in a letter char and an integer number of how many keys up or down from a given a "key"/"note" the output letter char will be. The musical alphabet is made of the letters A-G. One letter below A will be G. One letter above G will be A.
