@@ -50,6 +50,7 @@ public class OneHundredOneJavaProblems {
 		//System.out.println(sameMapValues(map));
 		System.out.println(getStringInfo("ccccccoo"));
 		System.out.println(Arrays.toString(javaPop(new int[]{1, 2, 3, 4})));
+		System.out.println(returnHalveTheInput(6));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -217,7 +218,7 @@ public int addInts(int num1, int num2){
 		}
 		return total;
 	}
-//            26. Create a method, remove7s, that takes in a list of integers and removes any number sevens and returns the list.
+//26. Create a method, remove7s, that takes in a list of integers and removes any number sevens and returns the list.
 	public static List<Integer> remove7s(List<Integer> list){
 		Iterator itr = list.iterator();
         while (itr.hasNext()) {
@@ -227,8 +228,8 @@ public int addInts(int num1, int num2){
         }
 		return list;
 	}
-//            27. Create a method, intArrayToArrayList, that takes in an array of integers and returns an array list of integers.
-//            28. Create a method, listsToMap, that takes in to arraylists of the same length and creates a hashmap with keys matching the first arraylist, set to values matching the second arraylist.
+//27. Create a method, intArrayToArrayList, that takes in an array of integers and returns an array list of integers.
+//28. Create a method, listsToMap, that takes in to arraylists of the same length and creates a hashmap with keys matching the first arraylist, set to values matching the second arraylist.
 	public static HashMap<String, String> listsToMap(ArrayList<String> arr1, ArrayList<String> arr2){
 		HashMap<String, String> map = new HashMap<String, String>();
 		for(int i = 0; i < arr1.size(); i++){
@@ -243,7 +244,7 @@ public int addInts(int num1, int num2){
 		Set<Integer> valuesSet = new HashSet<Integer>(map.values());
 		return valuesList.size() != valuesSet.size();
 	}
-//            30. Create a method, concatTwoMapValues, that takes in three inputs total: a hashmap with string keys and string inputs, and two string inputs. The method will return the concatenation of the values of hash map at the keys that match with the string inputs. If no key is found on the hash map matching with one or both of the passed in string inputs, an empty string will be concatentated.
+//30. Create a method, concatTwoMapValues, that takes in three inputs total: a hashmap with string keys and string inputs, and two string inputs. The method will return the concatenation of the values of hash map at the keys that match with the string inputs. If no key is found on the hash map matching with one or both of the passed in string inputs, an empty string will be concatentated.
 //31. Create a method, getStringInfo, that takes in a string and returns a hashmap with the following keys:
 //            "length" - containing the length of the passed in string
 //  "noOfCs" - containing the number of c's in the pass in string (case insensitive)
@@ -280,8 +281,11 @@ public int addInts(int num1, int num2){
 //33. Create a method, progressUpMusicKeys, that takes in a letter char and an integer number of how many keys up or down from a given a "key"/"note" the output letter char will be. The musical alphabet is made of the letters A-G. One letter below A will be G. One letter above G will be A.
 //34. Create a method, hashKeysToList, that takes in a hash map and returns the keys of the map as an array list in alphabetical order.
 //            35. Create a method, intToByte, that takes in an integer and returns the value as a byte. If the byte value is not the same as the integer due to overflow, throw a custom exception called ValueMismatchException. The exception should extend from exception and should not be handled by a try catch in the method.
-//36. Create a method, generateFibonacciSequence, that takes in an integer and returns the the Fibonacci sequence up to the passed in input.
+//36. Create a method, generateFibonacciSequence, that takes in an integer and returns the Fibonacci sequence up to the passed in input.
 //37. Create a method, returnHalveTheInput, that takes in an integer and returns halve the value as a double.
+	public static double returnHalveTheInput(int num){
+		return (double) num/ 2;
+	}
 //            38. Create a method, returnUniqueValues, that takes in two arraylists of integers and returns only integers that do not appear anywhere in both lists.
 //            39. Create a method, weaveList, that takes in two arraylists of Character letters and returns an arraylist of Character letters of that alternate between the indexes of the first and second arraylist. If one arraylist is longer that another, the remaining letters of the longer list will continue to add to the end of the output arraylist.
 //40. Create a method with a void return type, soutCadence, that takes in a hashmap of string keys and integer values. The method should sout out the name of each key in the hashmap after the number of milliseconds stored as the value at a given key.
