@@ -1,15 +1,7 @@
 import java.lang.reflect.Array;
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import javax.sound.sampled.SourceDataLine;
 
@@ -26,11 +18,16 @@ public class OneHundredOneJavaProblems {
 		//System.out.println(reverseValues(places));
 		//System.out.println(stringToCharArray("str"));
 		//System.out.println(sumInts(new int[]{1,2,3,4,5}));
-		//List<Integer> list = new ArrayList<Integer>();
-		//list.add(7);
-		//list.add(9);
-		//list.add(7);
-		//list.add(4);
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		ArrayList<Integer> arrayList = new ArrayList<>();
+		arrayList.add(1);
+		arrayList.add(9);
+		arrayList.add(3);
+		arrayList.add(4);
 		//System.out.println(remove7s(list));
 		//System.out.println(sameCase("StRiNG", "HeLlOO"));
 		//char ch1 = 'z';
@@ -51,6 +48,7 @@ public class OneHundredOneJavaProblems {
 		System.out.println(getStringInfo("ccccccoo"));
 		System.out.println(Arrays.toString(javaPop(new int[]{1, 2, 3, 4})));
 		System.out.println(returnHalveTheInput(6));
+		System.out.println(returnUniqueValues(list, arrayList));
 	}
 //    Create a class OneHundredOneJavaProblems and add the following public static methods:
 //            1. Create a method, returnHelloWorld, that returns the string "Hello World"
@@ -286,7 +284,12 @@ public int addInts(int num1, int num2){
 	public static double returnHalveTheInput(int num){
 		return (double) num/ 2;
 	}
-//            38. Create a method, returnUniqueValues, that takes in two arraylists of integers and returns only integers that do not appear anywhere in both lists.
+//38. Create a method, returnUniqueValues, that takes in two arraylists of integers and returns only integers that do not appear anywhere in both lists.
+	public static ArrayList<Integer> returnUniqueValues(ArrayList<Integer> arr1, ArrayList<Integer> arr2){
+		ArrayList<Integer> unique = new ArrayList<>(arr1);
+		unique.removeAll(arr2);
+		return unique;
+	}
 //            39. Create a method, weaveList, that takes in two arraylists of Character letters and returns an arraylist of Character letters of that alternate between the indexes of the first and second arraylist. If one arraylist is longer that another, the remaining letters of the longer list will continue to add to the end of the output arraylist.
 //40. Create a method with a void return type, soutCadence, that takes in a hashmap of string keys and integer values. The method should sout out the name of each key in the hashmap after the number of milliseconds stored as the value at a given key.
 //            --------------------------------- The next sets of problems, will require creating and adding to two new classes:
